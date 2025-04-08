@@ -11,9 +11,10 @@
 	}
 </script>
 
-<h1 class="text-4xl">Welcome to SvelteKit</h1>
-{#each texts as text}
-	<Button name={text.name} clickhandler={showBreath()} />
-{/each}
-<Breath />
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<div class="align-center flex-row justify-center bg-amber-400">
+	<h1 class="text-4xl">Welcome</h1>
+	{#each texts as text}
+		<Button name={text.name} />
+	{/each}
+	<Breath onClick={() => showBreath()} />
+</div>

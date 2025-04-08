@@ -1,12 +1,8 @@
 <script lang="ts">
-	let { name, clickhandler } = $props();
+	let { name } = $props();
 </script>
 
-<h1>HELLO {name}</h1>
-<button
-	onclick={() => {
-		clickhandler;
-	}}
->
-	clickme
-</button>
+<div class="flex gap-4">
+	<h1>{name}</h1>
+	<button> button-clickme </button>
+</div>
