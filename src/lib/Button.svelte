@@ -1,8 +1,18 @@
 <script lang="ts">
-	let { name } = $props();
+	export let name: string;
+	let value: number = 0;
+	function handleInput(event: Event) {
+		const input = event.target as HTMLInputElement;
+		value = parseInt(input.value) || 0; // Fallback to 0 if input is invalid
+	}
 </script>
 
-<div class="flex gap-4">
-	<h1>{name}</h1>
-	<button> button-clickme </button>
+<div class="flex items-center gap-4">
+	{name}
+	<input
+		type="number"
+		bind:value
+		on:input={handleInput}
+		class="w-16 rounded border px-2 text-center"
+	/>
 </div>
