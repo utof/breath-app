@@ -1,6 +1,6 @@
 <script lang="ts">
 	export let name: string;
-	let value: number = 0;
+	export let value: number = 0;
 	function handleInput(event: Event) {
 		const input = event.target as HTMLInputElement;
 		value = parseInt(input.value) || 0; // Fallback to 0 if input is invalid
