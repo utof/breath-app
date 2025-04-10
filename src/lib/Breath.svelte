@@ -1,6 +1,9 @@
 <script lang="ts">
 	let { params } = $props();
 
+	let breath_in_duration = 2000;
+	let breath_out_duration = 2200;
+
 	let breath_substate = {
 		IN: 'in',
 		OUT: 'out',
@@ -15,12 +18,12 @@
 
 	let breathOut = () => {
 		current_substate = breath_substate.OUT;
-		setTimeout(breathIn, 2200);
+		setTimeout(breathIn, breath_out_duration);
 	};
 
 	let breathIn = () => {
 		current_substate = breath_substate.IN;
-		setTimeout(breathOut, 2000);
+		setTimeout(breathOut, breath_in_duration);
 	};
 </script>
 
@@ -29,8 +32,16 @@
 		{params.breaths}
 		{params.sheesh}
 	</div>
+	<div
+		class="text-1xl inline-block transition-transform ease-in-out {current_substate ===
+		breath_substate.IN
+			? 'scale-150'
+			: 'scale-100'}"
+		style:transition-duration="{current_substate === breath_substate.IN
+			? breath_in_duration
+			: breath_out_duration}ms"
+	>
+		O
+	</div>
 	current substate {current_substate}
 </h1>
-
-<style>
-</style>
