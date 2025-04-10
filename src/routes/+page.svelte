@@ -27,7 +27,7 @@
 		{:else}
 			<Breath params={breath_params} />
 		{/if}
-		<button class="rounded-3xl bg-amber-400 text-3xl" onclick={() => showBreath()}>
+		<button class="rounded-3xl bg-amber-400 px-[0.25em] text-3xl" onclick={() => showBreath()}>
 			Begin breathwork
 		</button>
 	</div>

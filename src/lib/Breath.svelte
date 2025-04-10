@@ -13,7 +13,14 @@
 
 	let current_substate = $state(breath_substate.IN);
 
-	function breathIn() {}
+	let breathOut = () => {
+		setTimeout(breathIn, 2300);
+	};
+
+	let breathIn = () => {
+		// show <h1>Breathing in </h1>
+		setTimeout(breathOut, 2000);
+	};
 </script>
 
 <h1 class="text-4xl">
