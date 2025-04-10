@@ -1,9 +1,13 @@
 <script lang="ts">
-	export let onClick: () => void;
 	export let params;
 </script>
 
-<h1 class="text-4xl"><button onclick={onClick}> Begin Breathwork </button></h1>
+<h1 class="text-4xl">
+	<div>
+		{params}
+	</div>
+	BREATHINGGGGG
+</h1>
 
 <style>
 </style>

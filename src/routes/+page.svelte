@@ -19,14 +19,17 @@
 	}
 </script>
 
-<div class="flex h-screen items-center justify-center bg-amber-100">
-	<div class="max-w-md min-w-[200px] bg-red-300 text-center">
-		<h1 class="mb-10 text-4xl">Welcome</h1>
+<div class="flex h-screen items-center justify-center rounded-full bg-amber-100">
+	<div class="max-w-md min-w-[200px] overflow-hidden rounded-4xl bg-red-100 p-6 text-center">
+		<h1 class="mb-10 text-4xl">WIM 4 DA WIN</h1>
 		{#if current_state === statevals.CHOOSING}
 			<Choosing params={breath_params} />
 		{:else}
+			<Breath params={breath_params} />
 			<h1>hi</h1>
 		{/if}
-		<Breath params={breath_params} onClick={() => showBreath()} />
+		<button class="rounded-3xl bg-amber-400 text-3xl" onclick={() => showBreath()}>
+			Begin breathwork
+		</button>
 	</div>
 </div>

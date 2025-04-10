@@ -6,16 +6,16 @@
 	}
 </script>
 
-<div class="flex flex-col gap-4">
-	<div class="bg-blue-100">
+<div class="flex flex-col gap-4 text-2xl">
+	<div class="bg-gray-100 p-6 font-light">
 		{#each Object.entries(params) as [key, value]}
-			<div class="mb-6">
+			<div class="mb-6 flex justify-between">
 				<span class="mx-8">{key}</span>
 				<input
 					type="number"
 					{value}
 					on:input={(e) => handleInput(e, key)}
-					class="w-16 rounded border px-2 text-center"
+					class="w-16 rounded border border-hidden px-2 text-center"
 				/>
 			</div>
 		{/each}
