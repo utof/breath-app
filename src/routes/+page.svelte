@@ -15,7 +15,7 @@
 
 	function showBreath(): void {
 		console.log('a');
-		current_state = statevals.CHOOSING;
+		current_state = statevals.BREATHING;
 	}
 </script>
 
@@ -26,7 +26,6 @@
 			<Choosing params={breath_params} />
 		{:else}
 			<Breath params={breath_params} />
-			<h1>hi</h1>
 		{/if}
 		<button class="rounded-3xl bg-amber-400 text-3xl" onclick={() => showBreath()}>
 			Begin breathwork

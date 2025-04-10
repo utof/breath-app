@@ -7,10 +7,10 @@
 </script>
 
 <div class="flex flex-col gap-4 text-2xl">
-	<div class="bg-gray-100 p-6 font-light">
+	<div class=" font-light">
 		{#each Object.entries(params) as [key, value]}
 			<div class="mb-6 flex justify-between">
-				<span class="mx-8">{key}</span>
+				<span class="">{key}</span>
 				<input
 					type="number"
 					{value}
