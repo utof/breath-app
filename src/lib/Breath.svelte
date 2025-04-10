@@ -1,5 +1,5 @@
 <script lang="ts">
-	let params = $props();
+	let { params } = $props();
 
 	let breath_substate = {
 		IN: 'in',
@@ -8,26 +8,28 @@
 		IN_HOLD: 'in_hold',
 		PAUSE: 'pause'
 	};
-
+	$effect(() => breathIn());
 	let round_state = $state(1);
 
 	let current_substate = $state(breath_substate.IN);
 
 	let breathOut = () => {
-		setTimeout(breathIn, 2300);
+		current_substate = breath_substate.OUT;
+		setTimeout(breathIn, 2200);
 	};
 
 	let breathIn = () => {
-		// show <h1>Breathing in </h1>
+		current_substate = breath_substate.IN;
 		setTimeout(breathOut, 2000);
 	};
 </script>
 
 <h1 class="text-4xl">
 	<div>
-		{params}
+		{params.breaths}
+		{params.sheesh}
 	</div>
-	BREATHINGGGGG
+	current substate {current_substate}
 </h1>
 
 <style>

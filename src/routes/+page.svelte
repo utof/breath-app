@@ -19,8 +19,8 @@
 	}
 </script>
 
-<div class="flex h-screen items-center justify-center rounded-full bg-amber-100">
-	<div class="max-w-md min-w-[200px] overflow-hidden rounded-4xl bg-red-100 p-6 text-center">
+<div class="flex h-screen items-center justify-center rounded-full bg-gray-50">
+	<div class="w-3xl max-w-md min-w-[200px] overflow-hidden rounded-4xl bg-cyan-100 p-6 text-center">
 		<h1 class="mb-10 text-4xl">WIM 4 DA WIN</h1>
 		{#if current_state === statevals.CHOOSING}
 			<Choosing params={breath_params} />
